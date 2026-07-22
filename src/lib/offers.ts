@@ -6,7 +6,9 @@ export async function loadOffers(): Promise<{
   fromFallback: boolean
 }> {
   try {
-    const res = await fetch('/offers.json', { cache: 'no-store' })
+    const res = await fetch(`${import.meta.env.BASE_URL}offers.json`, {
+      cache: 'no-store',
+    })
     if (!res.ok) throw new Error(`offers.json responded ${res.status}`)
     const data = (await res.json()) as OffersFile
     if (!Array.isArray(data.offers)) throw new Error('malformed offers.json')
