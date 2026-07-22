@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tornado-50: #eff8ff;
+  --color-tornado-100: #dbeefe;
+  --color-tornado-200: #bfe3fe;
+  --color-tornado-300: #93d1fd;
+  --color-tornado-400: #60b7fa;
+  --color-tornado-500: #3b9af5;
+  --color-tornado-600: #257de9;
+  --color-tornado-700: #1d67d6;
+  --color-tornado-800: #1e54ad;
+  --color-tornado-900: #1e4889;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+}
