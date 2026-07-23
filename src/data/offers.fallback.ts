@@ -1,7 +1,7 @@
 import type { OffersFile } from '../types'
 
 export const fallbackOffers: OffersFile = {
-  "generatedAt": "2026-07-22T23:30:00.000Z",
+  "generatedAt": "2026-07-23T14:01:01.000Z",
   "offers": [
     {
       "id": "capital-one-360-checking-250",
@@ -15,8 +15,25 @@ export const fallbackOffers: OffersFile = {
       ],
       "expirationDate": null,
       "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
-      "lastVerified": "2026-07-22",
+      "lastVerified": "2026-07-23",
       "notes": "Listed as an ongoing offer — confirm the promo code is still active before applying.",
+      "isCustom": false
+    },
+    {
+      "id": "chase-total-checking-300",
+      "institution": "Chase (Total Checking)",
+      "accountType": "checking",
+      "bonusAmount": 300,
+      "minDeposit": 500,
+      "requirements": [
+        "Open online with a personalized coupon code from chase.com/personal/offers/total-checking-300 (or bring the emailed coupon to a branch)",
+        "Direct deposits totaling $500+ within 90 days of coupon enrollment",
+        "Not available to existing or recently-closed Chase checking customers; one bonus per two years"
+      ],
+      "expirationDate": null,
+      "sourceUrl": "https://www.chase.com/personal/offers/total-checking-300",
+      "lastVerified": "2026-07-23",
+      "notes": "Chase rotates this coupon periodically without a fixed public end date — confirm the coupon is still live before enrolling. A $400 tier (requiring $1,000+ in direct deposits) is also sometimes offered in the same promo family.",
       "isCustom": false
     },
     {
@@ -32,7 +49,7 @@ export const fallbackOffers: OffersFile = {
       ],
       "expirationDate": "2026-10-26",
       "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
-      "lastVerified": "2026-07-22",
+      "lastVerified": "2026-07-23",
       "isCustom": false
     },
     {
@@ -42,12 +59,12 @@ export const fallbackOffers: OffersFile = {
       "bonusAmount": 500,
       "minDeposit": 2000,
       "requirements": [
-        "Enroll using a promotional code (check keybank.com for the current code)",
+        "Enroll using promo code KDMB0526 ($500 tier) or KDMA0526 ($300 tier)",
         "Direct deposits totaling $2,000–$5,000+ within 90 days (bonus scales with deposit tier)"
       ],
       "expirationDate": "2026-12-11",
       "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
-      "lastVerified": "2026-07-22",
+      "lastVerified": "2026-07-23",
       "isCustom": false
     },
     {
@@ -61,7 +78,7 @@ export const fallbackOffers: OffersFile = {
       ],
       "expirationDate": "2026-09-30",
       "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
-      "lastVerified": "2026-07-22",
+      "lastVerified": "2026-07-23",
       "isCustom": false
     },
     {
@@ -76,7 +93,7 @@ export const fallbackOffers: OffersFile = {
       ],
       "expirationDate": "2026-12-31",
       "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
-      "lastVerified": "2026-07-22",
+      "lastVerified": "2026-07-23",
       "isCustom": false
     },
     {
@@ -91,7 +108,7 @@ export const fallbackOffers: OffersFile = {
       ],
       "expirationDate": "2026-08-31",
       "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
-      "lastVerified": "2026-07-22",
+      "lastVerified": "2026-07-23",
       "isCustom": false
     },
     {
@@ -106,7 +123,7 @@ export const fallbackOffers: OffersFile = {
       ],
       "expirationDate": "2026-09-08",
       "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
-      "lastVerified": "2026-07-22",
+      "lastVerified": "2026-07-23",
       "isCustom": false
     },
     {
@@ -118,13 +135,13 @@ export const fallbackOffers: OffersFile = {
       "requirements": [
         "$200 bonus for TD Complete Checking with $500+ in qualifying direct deposits within 60 days",
         "$300 bonus for TD Beyond Checking with $2,500+ in qualifying direct deposits within 60 days",
-        "Bonus paid within 180 days of account opening",
-        "Monthly maintenance fee may apply unless waived"
+        "Bonus paid on or before 180 days after account opening",
+        "Qualifying direct deposits limited to payroll, pension, or government benefits — P2P/internal transfers don't count"
       ],
       "expirationDate": "2026-07-30",
       "sourceUrl": "https://www.td.com/us/en/personal-banking/checking-and-saving-bonus",
-      "lastVerified": "2026-07-22",
-      "notes": "Expires very soon — verify it's still live before starting an application.",
+      "lastVerified": "2026-07-23",
+      "notes": "Confirmed still live on td.com as of 2026-07-23, but expires in about a week — verify before starting an application.",
       "isCustom": false
     },
     {
@@ -139,7 +156,7 @@ export const fallbackOffers: OffersFile = {
       ],
       "expirationDate": "2026-08-31",
       "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
-      "lastVerified": "2026-07-22",
+      "lastVerified": "2026-07-23",
       "isCustom": false
     },
     {
@@ -156,7 +173,7 @@ export const fallbackOffers: OffersFile = {
       ],
       "expirationDate": null,
       "sourceUrl": "https://www.cnbc.com/select/best-savings-account-bonuses/",
-      "lastVerified": "2026-07-22",
+      "lastVerified": "2026-07-23",
       "notes": "Exact tier table depends on deposit size — confirm current tiers on capitalone.com.",
       "isCustom": false
     },
@@ -173,7 +190,7 @@ export const fallbackOffers: OffersFile = {
       ],
       "expirationDate": null,
       "sourceUrl": "https://www.cnbc.com/select/best-savings-account-bonuses/",
-      "lastVerified": "2026-07-22",
+      "lastVerified": "2026-07-23",
       "notes": "Large-deposit offer — confirm current tier table and expiration on hsbc.com.",
       "isCustom": false
     },
@@ -192,8 +209,8 @@ export const fallbackOffers: OffersFile = {
       ],
       "expirationDate": "2026-07-31",
       "sourceUrl": "https://www.raisin.com/en-us/cd-accounts/",
-      "lastVerified": "2026-07-22",
-      "notes": "Deposit window closes July 31, 2026 — very little time left to act on this one.",
+      "lastVerified": "2026-07-23",
+      "notes": "Deposit window closes July 31, 2026 — about a week left to act on this one.",
       "isCustom": false
     }
   ]
