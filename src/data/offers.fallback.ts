@@ -1,7 +1,7 @@
 import type { OffersFile } from '../types'
 
 export const fallbackOffers: OffersFile = {
-  "generatedAt": "2026-07-22T00:00:00.000Z",
+  "generatedAt": "2026-07-22T23:30:00.000Z",
   "offers": [
     {
       "id": "capital-one-360-checking-250",
@@ -116,11 +116,13 @@ export const fallbackOffers: OffersFile = {
       "bonusAmount": 300,
       "minDeposit": 500,
       "requirements": [
-        "Direct deposits totaling $500–$2,500 within 60 days (bonus scales with deposit tier)",
+        "$200 bonus for TD Complete Checking with $500+ in qualifying direct deposits within 60 days",
+        "$300 bonus for TD Beyond Checking with $2,500+ in qualifying direct deposits within 60 days",
+        "Bonus paid within 180 days of account opening",
         "Monthly maintenance fee may apply unless waived"
       ],
       "expirationDate": "2026-07-30",
-      "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
+      "sourceUrl": "https://www.td.com/us/en/personal-banking/checking-and-saving-bonus",
       "lastVerified": "2026-07-22",
       "notes": "Expires very soon — verify it's still live before starting an application.",
       "isCustom": false
