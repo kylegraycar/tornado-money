@@ -63,12 +63,12 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="space-y-6">
-      <div className="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300">
+    <div className="space-y-8">
+      <div className="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm dark:border-stone-800 dark:bg-stone-900">
+        <label className="block text-sm font-medium text-stone-700 dark:text-stone-300">
           Cash on hand
         </label>
-        <div className="mt-1 flex gap-2">
+        <div className="mt-1.5 flex gap-2">
           <input
             type="number"
             min={0}
@@ -76,11 +76,11 @@ export default function Dashboard() {
             onChange={(e) => setCashInput(e.target.value)}
             onBlur={saveCash}
             onKeyDown={(e) => e.key === 'Enter' && saveCash()}
-            className="w-full max-w-xs rounded-md border border-slate-300 px-3 py-1.5 text-slate-900 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+            className="w-full max-w-xs rounded-lg border border-stone-300 px-3 py-1.5 text-stone-900 outline-none transition-shadow focus:border-tornado-400 focus:ring-2 focus:ring-tornado-200 dark:border-stone-700 dark:bg-stone-800 dark:text-white dark:focus:ring-tornado-900/50"
           />
         </div>
-        <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
-          Available to deploy: <strong>{formatCurrency(availableCash)}</strong>{' '}
+        <p className="mt-2.5 text-sm text-stone-500 dark:text-stone-400">
+          Available to deploy: <strong className="text-stone-700 dark:text-stone-200">{formatCurrency(availableCash)}</strong>{' '}
           ({formatCurrency(cashTiedUp)} tied up in offers you're working on)
         </p>
       </div>
@@ -97,7 +97,7 @@ export default function Dashboard() {
 
       <div>
         <div className="flex items-center justify-between">
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+          <h2 className="text-lg font-semibold tracking-tight text-stone-900 dark:text-white">
             Best fits right now
           </h2>
           <Link
@@ -108,7 +108,7 @@ export default function Dashboard() {
           </Link>
         </div>
         {bestFits.length === 0 ? (
-          <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
+          <p className="mt-2 text-sm text-stone-500 dark:text-stone-400">
             Nothing fits your available cash right now. Check the full offers
             list — some may be worth saving up for.
           </p>

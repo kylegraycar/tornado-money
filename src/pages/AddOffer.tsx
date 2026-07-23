@@ -40,12 +40,12 @@ export default function AddOffer() {
   }
 
   const inputClasses =
-    'mt-1 w-full rounded-md border border-slate-300 px-3 py-1.5 text-slate-900 dark:border-slate-700 dark:bg-slate-800 dark:text-white'
-  const labelClasses = 'block text-sm font-medium text-slate-700 dark:text-slate-300'
+    'mt-1 w-full rounded-lg border border-stone-300 px-3 py-1.5 text-stone-900 outline-none transition-shadow focus:border-tornado-400 focus:ring-2 focus:ring-tornado-200 dark:border-stone-700 dark:bg-stone-800 dark:text-white dark:focus:ring-tornado-900/50'
+  const labelClasses = 'block text-sm font-medium text-stone-700 dark:text-stone-300'
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg space-y-4">
-      <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+    <form onSubmit={handleSubmit} className="max-w-lg space-y-4 rounded-2xl border border-stone-200 bg-white p-6 shadow-sm dark:border-stone-800 dark:bg-stone-900">
+      <h2 className="text-lg font-semibold tracking-tight text-stone-900 dark:text-white">
         Add a custom offer
       </h2>
 
@@ -164,7 +164,7 @@ export default function AddOffer() {
 
       <button
         type="submit"
-        className="rounded-md bg-tornado-600 px-4 py-2 text-sm font-medium text-white hover:bg-tornado-700"
+        className="rounded-lg bg-tornado-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-tornado-700"
       >
         Add offer
       </button>

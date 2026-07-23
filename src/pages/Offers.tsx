@@ -44,14 +44,14 @@ export default function Offers() {
   }, [allOffers, typeFilter, onlyFits, availableCash, sortKey])
 
   return (
-    <div className="space-y-4">
-      <div className="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
+    <div className="space-y-5">
+      <div className="rounded-2xl border border-stone-200 bg-white p-5 text-sm text-stone-600 shadow-sm dark:border-stone-800 dark:bg-stone-900 dark:text-stone-300">
         <p>
           Offers change frequently — verify details on the bank's site before
           opening an account.
         </p>
         {!loadingOffers && (
-          <p className="mt-1 text-xs text-slate-400 dark:text-slate-500">
+          <p className="mt-1 text-xs text-stone-400 dark:text-stone-500">
             Data generated {offersGeneratedAt ? formatDate(offersGeneratedAt.slice(0, 10)) : 'unknown'}
             {offersFromFallback &&
               ' · showing bundled offline copy (couldn\'t reach the latest data)'}
@@ -64,7 +64,7 @@ export default function Offers() {
           <select
             value={typeFilter}
             onChange={(e) => setTypeFilter(e.target.value as AccountType | 'all')}
-            className="rounded-md border border-slate-300 px-3 py-1.5 text-sm text-slate-900 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+            className="rounded-lg border border-stone-300 px-3 py-1.5 text-sm text-stone-900 outline-none transition-shadow focus:border-tornado-400 focus:ring-2 focus:ring-tornado-200 dark:border-stone-700 dark:bg-stone-800 dark:text-white dark:focus:ring-tornado-900/50"
           >
             <option value="all">All account types</option>
             <option value="checking">Checking</option>
@@ -74,32 +74,33 @@ export default function Offers() {
           <select
             value={sortKey}
             onChange={(e) => setSortKey(e.target.value as SortKey)}
-            className="rounded-md border border-slate-300 px-3 py-1.5 text-sm text-slate-900 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+            className="rounded-lg border border-stone-300 px-3 py-1.5 text-sm text-stone-900 outline-none transition-shadow focus:border-tornado-400 focus:ring-2 focus:ring-tornado-200 dark:border-stone-700 dark:bg-stone-800 dark:text-white dark:focus:ring-tornado-900/50"
           >
             <option value="bonus-desc">Sort: highest bonus</option>
             <option value="min-deposit-asc">Sort: lowest deposit required</option>
           </select>
-          <label className="flex items-center gap-1.5 text-sm text-slate-600 dark:text-slate-300">
+          <label className="flex items-center gap-1.5 text-sm text-stone-600 dark:text-stone-300">
             <input
               type="checkbox"
               checked={onlyFits}
               onChange={(e) => setOnlyFits(e.target.checked)}
+              className="size-4 rounded border-stone-300 text-tornado-600 focus:ring-tornado-400 dark:border-stone-600"
             />
             Fits my available cash
           </label>
         </div>
         <Link
           to="/offers/new"
-          className="rounded-md bg-tornado-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-tornado-700"
+          className="rounded-lg bg-tornado-600 px-3.5 py-1.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-tornado-700"
         >
           + Add custom offer
         </Link>
       </div>
 
       {loadingOffers ? (
-        <p className="text-sm text-slate-500 dark:text-slate-400">Loading offers…</p>
+        <p className="text-sm text-stone-500 dark:text-stone-400">Loading offers…</p>
       ) : visibleOffers.length === 0 ? (
-        <p className="text-sm text-slate-500 dark:text-slate-400">
+        <p className="text-sm text-stone-500 dark:text-stone-400">
           No offers match these filters.
         </p>
       ) : (

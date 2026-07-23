@@ -27,11 +27,11 @@ export default function OfferCard({
   const expiresInDays = offer.expirationDate ? daysUntil(offer.expirationDate) : null
 
   return (
-    <div className="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+    <div className="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-stone-800 dark:bg-stone-900">
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div>
           <div className="flex flex-wrap items-center gap-2">
-            <h3 className="font-semibold text-slate-900 dark:text-white">
+            <h3 className="font-semibold tracking-tight text-stone-900 dark:text-white">
               {offer.institution}
             </h3>
             <span
@@ -40,18 +40,18 @@ export default function OfferCard({
               {accountTypeLabel(offer.accountType)}
             </span>
             {offer.isCustom && (
-              <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+              <span className="rounded-full bg-stone-100 px-2 py-0.5 text-xs font-medium text-stone-600 dark:bg-stone-800 dark:text-stone-300">
                 Your own find
               </span>
             )}
           </div>
-          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+          <p className="mt-1 text-sm text-stone-500 dark:text-stone-400">
             Requires {formatCurrency(offer.minDeposit)}
             {offer.apy != null ? ` · ${offer.apy}% APY` : ''}
           </p>
         </div>
         <div className="text-right">
-          <p className="text-xl font-bold text-tornado-700 dark:text-tornado-300">
+          <p className="text-xl font-semibold tracking-tight text-tornado-600 dark:text-tornado-400">
             {formatCurrency(offer.bonusAmount)}
           </p>
           {!fits && (
@@ -63,7 +63,7 @@ export default function OfferCard({
       </div>
 
       {offer.requirements.length > 0 && (
-        <ul className="mt-3 list-inside list-disc space-y-1 text-sm text-slate-600 dark:text-slate-300">
+        <ul className="mt-3 list-inside list-disc space-y-1 text-sm text-stone-600 dark:text-stone-300">
           {offer.requirements.map((req, i) => (
             <li key={i}>{req}</li>
           ))}
@@ -71,12 +71,12 @@ export default function OfferCard({
       )}
 
       {offer.notes && (
-        <p className="mt-2 text-xs italic text-slate-500 dark:text-slate-400">
+        <p className="mt-2 text-xs italic text-stone-500 dark:text-stone-400">
           {offer.notes}
         </p>
       )}
 
-      <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-400 dark:text-slate-500">
+      <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-stone-400 dark:text-stone-500">
         <div>
           {offer.expirationDate ? (
             <span className={expiresInDays != null && expiresInDays <= 14 ? 'font-medium text-red-600 dark:text-red-400' : ''}>
@@ -101,12 +101,12 @@ export default function OfferCard({
         )}
       </div>
 
-      <div className="mt-3 flex justify-end gap-2">
+      <div className="mt-4 flex justify-end gap-2">
         {onDelete && (
           <button
             type="button"
             onClick={onDelete}
-            className="rounded-md px-3 py-1.5 text-sm font-medium text-red-600 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-900/20"
+            className="rounded-lg px-3.5 py-1.5 text-sm font-medium text-red-600 transition-colors hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-900/20"
           >
             Delete
           </button>
@@ -115,7 +115,7 @@ export default function OfferCard({
           type="button"
           disabled={alreadyClaimed}
           onClick={onClaim}
-          className="rounded-md bg-tornado-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-tornado-700 disabled:cursor-not-allowed disabled:bg-slate-300 dark:disabled:bg-slate-700"
+          className="rounded-lg bg-tornado-600 px-3.5 py-1.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-tornado-700 disabled:cursor-not-allowed disabled:bg-stone-300 disabled:shadow-none dark:disabled:bg-stone-700"
         >
           {alreadyClaimed ? 'Already claimed' : 'Claim'}
         </button>
