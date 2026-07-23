@@ -2,13 +2,26 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAppData } from '../context/AppDataContext'
 import StatCard from '../components/StatCard'
+import OfferCard from '../components/OfferCard'
+import ClaimModal from '../components/ClaimModal'
+import ConfirmDialog from '../components/ConfirmDialog'
 import { formatCurrency } from '../lib/format'
 import { fitsCash, isAlreadyClaimed } from '../lib/match'
+import type { Offer } from '../types'
 
 export default function Dashboard() {
-  const { cashOnHand, setCashOnHand, availableCash, allOffers, claimedOffers } =
-    useAppData()
+  const {
+    cashOnHand,
+    setCashOnHand,
+    availableCash,
+    allOffers,
+    claimedOffers,
+    claimOffer,
+    deleteCustomOffer,
+  } = useAppData()
   const [cashInput, setCashInput] = useState(String(cashOnHand))
+  const [claiming, setClaiming] = useState<Offer | null>(null)
+  const [deleting, setDeleting] = useState<Offer | null>(null)
 
   const totalEarned = useMemo(
     () =>
@@ -100,23 +113,45 @@ export default function Dashboard() {
             list — some may be worth saving up for.
           </p>
         ) : (
-          <ul className="mt-3 space-y-2">
-            {bestFits.map((o) => (
-              <li
-                key={o.id}
-                className="flex items-center justify-between rounded-lg border border-slate-200 bg-white px-4 py-2 dark:border-slate-800 dark:bg-slate-900"
-              >
-                <span className="text-sm font-medium text-slate-800 dark:text-slate-200">
-                  {o.institution}
-                </span>
-                <span className="text-sm font-semibold text-tornado-700 dark:text-tornado-300">
-                  {formatCurrency(o.bonusAmount)}
-                </span>
-              </li>
+          <div className="mt-3 space-y-3">
+            {bestFits.map((offer) => (
+              <OfferCard
+                key={offer.id}
+                offer={offer}
+                availableCash={availableCash}
+                alreadyClaimed={isAlreadyClaimed(offer.id, claimedOffers)}
+                onClaim={() => setClaiming(offer)}
+                onDelete={offer.isCustom ? () => setDeleting(offer) : undefined}
+              />
             ))}
-          </ul>
+          </div>
         )}
       </div>
+
+      {claiming && (
+        <ClaimModal
+          offer={claiming}
+          onCancel={() => setClaiming(null)}
+          onConfirm={(cashAllocated, dateClaimed) => {
+            claimOffer(claiming, cashAllocated, dateClaimed)
+            setClaiming(null)
+          }}
+        />
+      )}
+
+      {deleting && (
+        <ConfirmDialog
+          title="Delete custom offer?"
+          message={`This removes "${deleting.institution}" from your offers list. This can't be undone.`}
+          confirmLabel="Delete"
+          danger
+          onCancel={() => setDeleting(null)}
+          onConfirm={() => {
+            deleteCustomOffer(deleting.id)
+            setDeleting(null)
+          }}
+        />
+      )}
     </div>
   )
 }
