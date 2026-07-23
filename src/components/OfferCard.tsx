@@ -1,6 +1,7 @@
 import type { Offer } from '../types'
 import { formatCurrency, formatDate, daysUntil } from '../lib/format'
 import { accountTypeLabel, fitsCash } from '../lib/match'
+import { highlightPromoCodes } from '../lib/promoCode'
 
 const typeColors: Record<Offer['accountType'], string> = {
   checking:
@@ -65,7 +66,7 @@ export default function OfferCard({
       {offer.requirements.length > 0 && (
         <ul className="mt-3 list-inside list-disc space-y-1 text-sm text-stone-600 dark:text-stone-300">
           {offer.requirements.map((req, i) => (
-            <li key={i}>{req}</li>
+            <li key={i}>{highlightPromoCodes(req)}</li>
           ))}
         </ul>
       )}
