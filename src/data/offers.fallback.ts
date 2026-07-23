@@ -14,7 +14,7 @@ export const fallbackOffers: OffersFile = {
         "Set up at least two direct deposits of $500+ each within 75 days of account opening"
       ],
       "expirationDate": null,
-      "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
+      "sourceUrl": "https://www.capitalone.com/bank/checking250/",
       "lastVerified": "2026-07-23",
       "notes": "Listed as an ongoing offer — confirm the promo code is still active before applying.",
       "isCustom": false
@@ -48,8 +48,9 @@ export const fallbackOffers: OffersFile = {
         "$15 monthly account fee applies unless waived"
       ],
       "expirationDate": "2026-10-26",
-      "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
+      "sourceUrl": "https://www.citi.com/banking/special-offers",
       "lastVerified": "2026-07-23",
+      "notes": "This links to Citi's general offers hub since their featured-offer page uses per-visitor tracking links — look for the Regular Checking offer there.",
       "isCustom": false
     },
     {
@@ -63,7 +64,7 @@ export const fallbackOffers: OffersFile = {
         "Direct deposits totaling $2,000–$5,000+ within 90 days (bonus scales with deposit tier)"
       ],
       "expirationDate": "2026-12-11",
-      "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
+      "sourceUrl": "https://www.key.com/personal/checking/checking-account-bonus-offers.html",
       "lastVerified": "2026-07-23",
       "isCustom": false
     },
@@ -77,8 +78,9 @@ export const fallbackOffers: OffersFile = {
         "Direct deposits totaling $2,000–$10,000+ within 90 days (bonus scales with deposit tier)"
       ],
       "expirationDate": "2026-09-30",
-      "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
+      "sourceUrl": "https://www.bankofamerica.com/deposits/checking/explore-advantage-banking/",
       "lastVerified": "2026-07-23",
+      "notes": "Bank of America's current bonus tiers aren't shown on this general product page since the promo runs through a separate tracked landing page — search \"Bank of America Advantage Banking offer\" from this page to find it.",
       "isCustom": false
     },
     {
@@ -92,7 +94,7 @@ export const fallbackOffers: OffersFile = {
         "Direct deposits totaling $5,000+ within 25 days of account opening"
       ],
       "expirationDate": "2026-12-31",
-      "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
+      "sourceUrl": "https://www.sofi.com/banking/checking-offer/",
       "lastVerified": "2026-07-23",
       "isCustom": false
     },
@@ -101,13 +103,14 @@ export const fallbackOffers: OffersFile = {
       "institution": "PNC Bank (Virtual Wallet)",
       "accountType": "checking",
       "bonusAmount": 400,
-      "minDeposit": 500,
+      "minDeposit": 5000,
       "requirements": [
-        "Direct deposits totaling $500–$5,000+ within 60 days",
-        "Tiered bonus: $100 / $200 / $400 depending on the deposit level reached"
+        "$400 reward requires opening Virtual Wallet with Performance Select and a $5,000+ qualifying direct deposit within 60 days",
+        "A $100 reward is also available on a plain Virtual Wallet with a $500+ qualifying direct deposit within 60 days",
+        "Reward paid 60-90 days after conditions are met"
       ],
       "expirationDate": "2026-08-31",
-      "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
+      "sourceUrl": "https://www.pnc.com/en/personal-banking/banking/checking/bonus-offer.html",
       "lastVerified": "2026-07-23",
       "isCustom": false
     },
@@ -122,8 +125,9 @@ export const fallbackOffers: OffersFile = {
         "Direct deposits totaling $4,000+ within 90 days"
       ],
       "expirationDate": "2026-09-08",
-      "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
+      "sourceUrl": "https://www.bmo.com/en-us/main/personal/checking-accounts/digital-offer/",
       "lastVerified": "2026-07-23",
+      "notes": "Limited to primary applicants in AZ, CA, CO, FL, IA, IL, IN, MN, NM, NV, OR, UT, WA, or WI.",
       "isCustom": false
     },
     {
@@ -155,7 +159,7 @@ export const fallbackOffers: OffersFile = {
         "Regional availability — check whether it's offered in your state"
       ],
       "expirationDate": "2026-08-31",
-      "sourceUrl": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/",
+      "sourceUrl": "https://checking.mtb.com/",
       "lastVerified": "2026-07-23",
       "isCustom": false
     },
@@ -164,17 +168,17 @@ export const fallbackOffers: OffersFile = {
       "institution": "Capital One (360 Performance Savings)",
       "accountType": "savings",
       "bonusAmount": 1500,
-      "minDeposit": 10000,
+      "minDeposit": 20000,
       "apy": 3.2,
       "requirements": [
         "Use promo code BONUS1500 at sign-up",
-        "Deposit new funds within 15 days of account opening",
-        "Maintain the balance through a 90-day hold period (bonus scales with deposit size, up to $1,500 for the largest tier)"
+        "Deposit new funds within 15 days of account opening: $20,000–$49,999 earns $300, $50,000–$99,999 earns $750, $100,000+ earns $1,500",
+        "Maintain the balance for 90 days after the 15-day funding window (105 days total); transfers from other Capital One accounts don't count"
       ],
       "expirationDate": null,
-      "sourceUrl": "https://www.cnbc.com/select/best-savings-account-bonuses/",
+      "sourceUrl": "https://www.capitalone.com/bank/savings-accounts/online-performance-savings-account/",
       "lastVerified": "2026-07-23",
-      "notes": "Exact tier table depends on deposit size — confirm current tiers on capitalone.com.",
+      "notes": "Capital One's product page doesn't display the promo directly — confirm the BONUS1500 code is still live before applying.",
       "isCustom": false
     },
     {
@@ -182,16 +186,16 @@ export const fallbackOffers: OffersFile = {
       "institution": "HSBC (Premier Savings)",
       "accountType": "savings",
       "bonusAmount": 1500,
-      "minDeposit": 100000,
+      "minDeposit": 150000,
       "apy": 4.1,
       "requirements": [
-        "Deposit $100,000 in new-to-HSBC funds",
-        "Maintain the balance for a 130-day hold period"
+        "Deposit or invest $150,000–$249,999 in new-to-HSBC funds for the $1,500 tier (higher tiers pay more for larger deposits)",
+        "Bonus paid within 8 weeks of meeting requirements"
       ],
       "expirationDate": null,
-      "sourceUrl": "https://www.cnbc.com/select/best-savings-account-bonuses/",
+      "sourceUrl": "https://www.us.hsbc.com/checking-accounts/campaigns/premier-relationship/",
       "lastVerified": "2026-07-23",
-      "notes": "Large-deposit offer — confirm current tier table and expiration on hsbc.com.",
+      "notes": "Large-deposit offer — confirm the current tier table and expiration on hsbc.com.",
       "isCustom": false
     },
     {
